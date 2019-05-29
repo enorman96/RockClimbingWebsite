@@ -124,7 +124,73 @@ CSS TO MAKE TEXT OVERLAY OVER IMAGES
   transform: translate(-50%, -50%);
 }
 
+/**************************************
+CSS TO MAKE SECTIONS OF WEBSITE COLLABSIBLE
+**************************************/
+  /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+
+} 
+
+/* Add icons -- Add a symbol to each button to indicate whether the collapsible content is open or closed: */
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
 </style>
+
+<script>
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+
+</script>
 
 <body>
   <header>
@@ -134,9 +200,16 @@ CSS TO MAKE TEXT OVERLAY OVER IMAGES
   </header>
 
 <nav>
-<h3>About</h3>  
-<h3>Contact Us</h3>  
-<h3>Information and FAQ</h3>  
+  <button class="collapsible">Open Collapsible</button>
+<div class="content">
+  <p>Lorem ipsum...</p>
+
+  <h3>About</h3>  
+  <h3>Contact Us</h3>  
+  <h3>FAQs</h3>
+    <h3>Links</h3>  
+  
+</div>
 </nav>
 
 
