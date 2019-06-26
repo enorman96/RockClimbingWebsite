@@ -10,33 +10,33 @@ p    {color: red;}
 STATIC LAYOUT CSS
 **************************************/
 .wrapper {
-  width: 960px;
-  margin: 0 auto;
+  width: 100%; // can designate in px too, ex 960px
+  margin: 0 auto; // margin “auto” keeps it centered (0 = at the top 0 margin, auto is centered in the middle)
 }
 
 header {
   width: 960px;
 }
 
+
 nav, section {
-  float: left;
+  float: left; // float left means that containers will come up next to each other (left -> right) instead of coming up on top of each other
 }
 
 nav {
-  width: 200px;
-  margin-right: 10px;
+  width: calc(20% - 20px);;
+  margin-right: 20px;
 }
 
 section {
-  width: 750px;
+  width: 80%;
 }
-
 
 
 /**************************************
 CSS TO MAKE THIS SITE LOOK PRETTY
 **************************************/
-*, *:before, *:after {
+*, *:before,  *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -114,47 +114,26 @@ CSS TO MAKE TEXT OVERLAY OVER IMAGES
 }
 
 /**************************************
-CSS TO MAKE SECTIONS OF WEBSITE COLLABSIBLE
+CSS TO MAKE IMAGE GALLERY LAYOUT
 **************************************/
-  /* Style the button that is used to open and close the collapsible content */
-.collapsible {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
   width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
+  height: auto;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  background-color: #ccc;
+div.desc {
+  padding: 15px;
+  text-align: center;
 }
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-
-} 
-
-/* Add icons -- Add a symbol to each button to indicate whether the collapsible content is open or closed: */
-.collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
-
