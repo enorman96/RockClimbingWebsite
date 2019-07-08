@@ -5,14 +5,29 @@ body {background-color: powderblue;}
 h1   {color: blue;}
 p    {color: red;}
 */
+header {
+  background-color: #F1F1F1;
+  text-align: left;
+  padding: 20px;
+}
+
+wrapper {
+  width: 100%; // can designate in px too, ex 960px
+  margin: 0 auto; // margin “auto” keeps it centered (0 = at the top 0 margin, auto is centered in the middle)
+  padding: 200px 200px;
+}
+
 
 /**************************************
 STATIC LAYOUT CSS
 **************************************/
+
+/*
 .wrapper {
   width: 100%; // can designate in px too, ex 960px
   margin: 0 auto; // margin “auto” keeps it centered (0 = at the top 0 margin, auto is centered in the middle)
 }
+
 
 header {
   width: 960px;
@@ -30,12 +45,30 @@ nav {
 
 section {
   width: 80%;
+} */
+
+/* these 2 added from w3 schools ex:
+https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_cafe */
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/coffeehouse.jpg");
+  min-height: 75%;
 }
 
+.menu {
+  display: none;
+}
 
 /**************************************
 CSS TO MAKE THIS SITE LOOK PRETTY
 **************************************/
+
+/*
 *, *:before,  *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -66,52 +99,64 @@ nav, section {
   padding: 200px 0;
 }
 
+info {
+  class="w3-display-left";
+}
+*/
 
 /**************************************
 CSS TO MAKE TEXT OVERLAY OVER IMAGES
 **************************************/
 /* Container holding the image and the text */
+
+/*
 .container {
   position: relative;
   text-align: center;
   color: white;
-}
+} */
 
 /* Bottom left text */
+/*
 .bottom-left {
   position: absolute;
   bottom: 8px;
   left: 16px;
-}
+} */
+
 
 /* Top left text */
+/*
 .top-left {
   position: absolute;
   top: 8px;
   left: 16px;
-}
+} */
 
 /* Top right text */
+/*
 .top-right {
   position: absolute;
   top: 8px;
   right: 16px;
-}
+}*/
 
 /* Bottom right text */
+/*
 .bottom-right {
   position: absolute;
   bottom: 8px;
   right: 16px;
-}
+}*/
 
 /* Centered text */
+/*
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+}*/
 
 /**************************************
 CSS TO MAKE IMAGE GALLERY LAYOUT
