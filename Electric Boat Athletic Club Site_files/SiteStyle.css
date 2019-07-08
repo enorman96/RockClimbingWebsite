@@ -64,6 +64,43 @@ body, html {
   display: none;
 }
 
+header {
+  color: green;
+ text-align: center;
+ text-decoration: overline underline;
+ text-transform: uppercase;
+ letter-spacing: 3px;
+  word-spacing: 8px;
+  font-size: 2.5em; /* 40px/16=2.5em */
+  font-weight: bold;
+  line-height: 30px;
+
+}
+
+h2 {
+  text-indent: 30px;
+}
+
+h5 {
+  text-transform: uppercase;
+}
+
+div {
+  text-align: justify;
+}
+
+p {
+  text-indent: 50px;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 50px 100px;
+    justify-content: center;
+
+}
+
+
 /**************************************
 CSS TO MAKE THIS SITE LOOK PRETTY
 **************************************/
