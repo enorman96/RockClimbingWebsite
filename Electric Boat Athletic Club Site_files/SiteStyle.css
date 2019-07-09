@@ -76,7 +76,9 @@ header {
   line-height: 30px;
 
 }
-
+ul.a {
+  list-style-type: circle;
+}
 h2 {
   text-indent: 30px;
 }
