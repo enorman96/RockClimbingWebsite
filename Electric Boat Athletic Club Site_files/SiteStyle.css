@@ -5,11 +5,7 @@ body {background-color: powderblue;}
 h1   {color: blue;}
 p    {color: red;}
 */
-header {
-  background-color: #F1F1F1;
-  text-align: left;
-  padding: 20px;
-}
+
 
 wrapper {
   width: 100%; // can designate in px too, ex 960px
@@ -65,6 +61,10 @@ body, html {
 }
 
 header {
+  background-color: #F1F1F1;
+  text-align: left;
+  padding: 20px;
+
   color: green;
  text-align: center;
  text-decoration: overline underline;
@@ -84,10 +84,15 @@ h2 {
   text-indent: 30px;
 }
 
+hdetail {
+  white-space: nowrap;
+}
+
 .header {
+  box-sizing: border-box;
   border: thick double #228b22;
   margin: 20px;
-  object-fit: fill;
+  padding: 2px;
 
 }
 h5 {
@@ -108,6 +113,7 @@ p {
     justify-content: center;
 
 }
+
 
 
 /**************************************
