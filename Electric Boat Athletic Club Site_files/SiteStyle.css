@@ -93,7 +93,10 @@ hdetail {
   border: thick double #228b22;
   margin: 20px;
   padding: 2px;
+}
 
+.divclass {
+  background-color: #faf7ed;
 }
 h5 {
   text-transform: uppercase;
