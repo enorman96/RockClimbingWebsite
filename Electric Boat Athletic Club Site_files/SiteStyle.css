@@ -64,7 +64,6 @@ header {
   background-color: #F1F1F1;
   text-align: left;
   padding: 20px;
-
   color: green;
  text-align: center;
  text-decoration: overline underline;
@@ -92,7 +91,9 @@ hdetail {
   box-sizing: border-box;
   border: thick double #228b22;
   margin: 20px;
-  padding: 2px;
+  padding: 20px;
+  background-image: url("../resources/RaggedMtJune2019/Kile 3.jpg");
+  overflow: hidden
 }
 
 .divclass {
