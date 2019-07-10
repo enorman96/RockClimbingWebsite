@@ -47,7 +47,10 @@ section {
 https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_cafe */
 body, html {
   height: 100%;
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Candara", sans-serif;
+
+
+/*  font-family: "Inconsolata", sans-serif; */
 }
 .bgimg {
   background-position: center;
@@ -76,6 +79,11 @@ header {
   white-space: : nowrap;
 
 }
+.bodyStyle {
+  max-width:  80%; // can designate in px too, ex 960px
+
+}
+
 .ulList {
   list-style-type:none;
 }
