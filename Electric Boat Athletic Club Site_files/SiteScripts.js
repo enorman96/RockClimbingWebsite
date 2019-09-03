@@ -10,9 +10,8 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-    } 
+    }
   });
 }
 
 /* Mountain project data API: https://www.mountainproject.com/data. Also look at google map API for route destimation overlay */
-
