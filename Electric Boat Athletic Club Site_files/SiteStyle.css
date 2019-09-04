@@ -1,10 +1,7 @@
 
-
-/*
-body {background-color: powderblue;}
-h1   {color: blue;}
-p    {color: red;}
-*/
+/**************************************
+STATIC LAYOUT CSS
+**************************************/
 
 
 wrapper {
@@ -14,49 +11,12 @@ wrapper {
 }
 
 
-/**************************************
-STATIC LAYOUT CSS
-**************************************/
-
-/*
-.wrapper {
-  width: 100%; // can designate in px too, ex 960px
-  margin: 0 auto; // margin “auto” keeps it centered (0 = at the top 0 margin, auto is centered in the middle)
-}
-
-
-header {
-  width: 960px;
-}
-
-
-nav, section {
-  float: left; // float left means that containers will come up next to each other (left -> right) instead of coming up on top of each other
-}
-
-nav {
-  width: calc(20% - 20px);;
-  margin-right: 20px;
-}
-
-section {
-  width: 80%;
-} */
-
 /* these 2 added from w3 schools ex:
 https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_cafe */
 body, html {
   height: 100%;
   font-family: "Candara", sans-serif;
-
-
 /*  font-family: "Inconsolata", sans-serif; */
-}
-.bgimg {
-  background-position: center;
-  background-size: cover;
-  background-image: url("/w3images/coffeehouse.jpg");
-  min-height: 75%;
 }
 
 .menu {
@@ -64,12 +24,12 @@ body, html {
 }
 
 header {
-  background-color: #F1F1F1;
-  text-align: left;
-  padding: 20px;
-  color: green;
+  width: 100%;
+  background-color: #57648C; // dark blue
+  padding: 30px;
+  color: black;
  text-align: center;
- text-decoration: overline underline;
+ text-decoration: overline ;
  text-transform: uppercase;
  letter-spacing: 3px;
   word-spacing: 8px;
@@ -77,42 +37,53 @@ header {
   font-weight: bold;
   line-height: 30px;
   white-space: : nowrap;
-
-}
-.bodyStyle {
-  max-width:  80%; // can designate in px too, ex 960px
-
+  display: inline-block;
 }
 
-.ulList {
-  list-style-type:none;
-}
-h2 {
-  text-indent: 30px;
+.sitetitle {
+  box-sizing: border-box;
+  border: thick double black;
+  margin: 20px;
+  padding: 20px;
+  overflow: hidden
 }
 
 hdetail {
   white-space: nowrap;
 }
 
-.header {
-  box-sizing: border-box;
-  border: thick double #228b22;
-  margin: 20px;
-  padding: 20px;
-  background-image: url("../resources/RaggedMtJune2019/Kile3.jpg");
-  overflow: hidden
+.subtitle {
+  border: thick double #57648C; // same blue as site title
+  color: black;
 }
 
-.divclass {
-  background-color: #faf7ed;
+.bodyStyle {
+  max-width:  80%; // can designate in px too, ex 960px
 }
+
+.ulList {
+  list-style-type:none;
+}
+
+h2 {
+  text-indent: 30px;
+}
+
+
+.divclass {
+  background-color: #E5E5E5; // rock grey
+}
+
 h5 {
   text-transform: uppercase;
 }
 
 div {
   text-align: justify;
+  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px; /* Firefox */
+  column-gap: 40px;
+margin-bottom: 10px;
 }
 
 p {
@@ -123,7 +94,6 @@ p {
   display: grid;
   grid-gap: 50px 100px;
     justify-content: center;
-
 }
 
 
@@ -131,96 +101,6 @@ p {
 /**************************************
 CSS TO MAKE THIS SITE LOOK PRETTY
 **************************************/
-
-/*
-*, *:before,  *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  background: #2980b9;
-  color: #FFF;
-  font-family: Helvetica;
-  text-align: center;
-  margin: 0;
-}
-
-header,
-nav,
-section {
-  border: 1px solid rgba(255,255,255,0.8);
-  margin-bottom: 10px;
-  border-radius: 3px;
-}
-
-header {
-  padding: 20px 0;
-}
-
-nav, section {
-  padding: 200px 0;
-}
-
-info {
-  class="w3-display-left";
-}
-*/
-
-/**************************************
-CSS TO MAKE TEXT OVERLAY OVER IMAGES
-**************************************/
-/* Container holding the image and the text */
-
-/*
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-} */
-
-/* Bottom left text */
-/*
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-} */
-
-
-/* Top left text */
-/*
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-} */
-
-/* Top right text */
-/*
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}*/
-
-/* Bottom right text */
-/*
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}*/
-
-/* Centered text */
-/*
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}*/
 
 /**************************************
 CSS TO MAKE IMAGE GALLERY LAYOUT
@@ -277,65 +157,8 @@ CSS TO Make Gallery Hovering
 
 
 
-
-/* Modal Content (Image) */
-/* .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-} */
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-/* #caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-} */
-
-/* Add Animation - Zoom in the Modal */
-/* .modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-} */
-
-/* @keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-} */
-
-/* The Close Button */
-/* .close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-} */
-
-/* .close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-} */
-
-/* 100% Image Width on Smaller Screens */
-/* @media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-} */
-
 /*********************************
-MODAL LIGHTROOM (OVERLAP WITH MODAL -- FIX THIS LATER)
+MODAL LIGHTBOX(OVERLAP WITH MODAL -- FIX THIS LATER)
 **********************************/
 body {
   font-family: Verdana, sans-serif;
@@ -372,17 +195,16 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
+  background-color: #E5E5E5;
 }
 
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: #57648C; /* blue */
   margin: auto;
   padding: 0;
   width: 90%;
-  max-width: 1200px;
 }
 
 /* The Close Button */
@@ -403,7 +225,12 @@ body {
 }
 
 .mySlides {
-  display: none;
+  display: inline-block;
+text-align: center;
+}
+
+.myModals {
+  height: 100%;
 }
 
 .cursor {
@@ -437,7 +264,7 @@ body {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* Number text (1/3 etc) */
@@ -458,6 +285,11 @@ img {
   background-color: black;
   padding: 2px 16px;
   color: white;
+  box-sizing: border-box;
+  border: thick double #57648C; /* same blue as title */
+  margin-top: 10px;
+  margin-bottom: 10px;
+
 }
 
 .demo {
@@ -467,6 +299,8 @@ img {
 .active,
 .demo:hover {
   opacity: 1;
+  border: thick double #57648C; /* same blue as title */
+
 }
 
 img.hover-shadow {
