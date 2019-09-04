@@ -1,30 +1,6 @@
 
-/**********************************
-Scipt to make images larger
-******************************/
-// Get the modal
-// var modal = document.getElementById("myModal");
-//
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.getElementById("myImg");
-// var modalImg = document.getElementById("img01");
-// var captionText = document.getElementById("caption");
-// img.onclick = function(){
-//   modal.style.display = "block";
-//   modalImg.src = this.src;
-//   captionText.innerHTML = this.alt;
-// }
-//
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-//
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-
 /*****************************
-LIGHTROOM SCRIPT
+LIGHTROOM MODAL IMAGES SCRIPT
 ***************************8**/
 
 function openModal() {
@@ -34,6 +10,14 @@ function openModal() {
 function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
+
+// close the modal when click esc
+document.addEventListener('keyup', function(event) {
+  if (event.keyCode === 27) {
+    closeModal();
+  }
+});
+
 
 var slideIndex = 1;
 showSlides(slideIndex);
