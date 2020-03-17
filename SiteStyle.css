@@ -127,6 +127,7 @@ div.gallery:hover {
 div.gallery img {
   width: 100%;
   height: auto;
+
 }
 
 div.desc {
@@ -285,6 +286,8 @@ text-align: center;
 
 img {
   margin-bottom: -4px;
+  border-radius: 4px;
+
 }
 
 .caption-container {
