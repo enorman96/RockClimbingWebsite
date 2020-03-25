@@ -46,26 +46,32 @@
     <link rel="stylesheet" type="text/css" href="SiteStyle.css">
   </head>
 
-  <body class="test">
+  <body>
+
+    <nav class="navbar-container">
+      <div class="topnav" id="navbar">
+        <a href="#about">About</a>
+        <a href="#locations">Locations</a>
+        <a href="#contact">Contact</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+    </nav>
+
     <!-- SECTION: HEADER  -->
     <header>
-      <section class="sitetitle backgndHeader">
-
-        <hdetail> <img src="./resources/HeaderImgs/sub_logo2.png"> EBAC Rock Climbing</hdetail>
-      </section>
+        <!-- sub logo with club name  -->
+        <hdetail> <img src="./resources/HeaderImgs/sub_logo2.png">            EBAC Rock Climbing            <img src="./resources/HeaderImgs/sub_logo1.png"></hdetail>
     </header>
 
 
     <!-- SECTION: CLIMBING INFORMATION -->
     <!-- Add a background color and large text to the whole page -->
-    <section class="sectionSegments divclass w3-large w3-container" id="ClimbingInformation">
+    <section class="sectionSegments w3-large w3-container" id="ClimbingInformation">
 
       <!-- CLIMBING INFORMATION / EBAC CLUB INFORMATION -->
-      <div class="w3-content bodyStyle img-responsive backgndInfo" id="ClubInfo" >
-        <!--  w3-light-grey - changes color of background -->
-
-        <h5 class="w3-center w3-padding-64 clubInfoText"><span class="w3-tag w3-wide subtitle">EBAC Club Info</span></h5>
-        <ul>
+      <div id="about" class="w3-content bodyStyle img-responsive backgndEBACInfo" id="ClubInfo">
+        <h5  class="w3-center w3-padding-64"><span class="w3-tag w3-wide subtitle">EBAC Club Info</span></h5>
+        <ul class="clubInfoText">
           <li>The goal of the climbing club is to provide a safe and friendly atmosphere to learn how to climb outside.</li>
           <li>The club has about 40 participants, so it is easy to get a group together to meet up at nearby climbing gyms, or to set up a day of outdoor climbing at one of the local crags. </li>
           <li>During the climbing season, the club meets weekly to climb outside.</li>
@@ -88,32 +94,32 @@
 
       <!-- CLIMBING INFORMATION / LINKS TO CLIMBING DESTINATIONS -->
       <div class="w3-content bodyStyle backgndResources" id="locations">
-        <div class="textTest">
-        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide subtitle">Local Climbing Locations</span></h5>
-<u1>OUTDOORS</u1>
-        <ul> <a href="https://www.mountainproject.com/area/106583848/lantern-hill" title="LanternHill" target="_blank" class="w3-hover-text-green">Lantern Hill,</a>
-          North Stonington is a short hike near EB's Eagle Park facility.</ul>
-        <ul> <a href="https://www.mountainproject.com/area/108314153/ragged-mountain" title="Ragged" target="_blank" class="w3-hover-text-green">Ragged Mountain,</a>
-          central CT has about 90 routes. It has both Trad and Toprope routes available.</ul>
-        <ul> <a href="http://climbri.org/beach.htm" title="BeachPond" target="_blank" class="w3-hover-text-green">Beach Pond,</a>
-          Exeter RI is a small crag with a handful of short bolted routes.</ul>
-        <ul> <a href="http://climbri.org/ross.htm" title="RossPond" target="_blank" class="w3-hover-text-green">Ross Pond,</a>
-          Killingly CT has three main walls of varying height.</ul>
-        <ul>There are many other crags in the area, especially in central CT, but the above ones are the ones the EBAC climbs as a group.</ul>
-        <u1>INDOORS</u1>
+        <div class="clubInfoText">
+          <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide subtitle">Local Climbing Locations</span></h5>
+          <u1>OUTDOORS</u1>
+          <ul> <a href="https://www.mountainproject.com/area/106583848/lantern-hill" title="LanternHill" target="_blank" class="w3-hover-text-green">Lantern Hill,</a>
+            North Stonington is a short hike near EB's Eagle Park facility.</ul>
+          <ul> <a href="https://www.mountainproject.com/area/108314153/ragged-mountain" title="Ragged" target="_blank" class="w3-hover-text-green">Ragged Mountain,</a>
+            central CT has about 90 routes. It has both Trad and Toprope routes available.</ul>
+          <ul> <a href="http://climbri.org/beach.htm" title="BeachPond" target="_blank" class="w3-hover-text-green">Beach Pond,</a>
+            Exeter RI is a small crag with a handful of short bolted routes.</ul>
+          <ul> <a href="http://climbri.org/ross.htm" title="RossPond" target="_blank" class="w3-hover-text-green">Ross Pond,</a>
+            Killingly CT has three main walls of varying height.</ul>
+          <ul>There are many other crags in the area, especially in central CT, but the above ones are the ones the EBAC climbs as a group.</ul>
+          <u1>INDOORS</u1>
 
-        <ul> <a href="https://peacedale.rockspotclimbing.com/" title="RockSpot" target="_blank" class="w3-hover-text-green">Rock Spot</a>
-          (Peacedale, RI) </ul>
+          <ul> <a href="https://peacedale.rockspotclimbing.com/" title="RockSpot" target="_blank" class="w3-hover-text-green">Rock Spot</a>
+            (Peacedale, RI) </ul>
           <ul> <a href="https://centralrockgym.com/warwick/" title="CRG" target="_blank" class="w3-hover-text-green">Central Rock Gym</a>
-          (Warwick, RI / Glastonbury, CT) </ul>
+            (Warwick, RI / Glastonbury, CT) </ul>
           <ul>The club has $12 passes available for both gyms for club members.</ul>
-      </div>
-      <div>
+        </div>
+        <div>
     </section>
 
 
     <!-- SECTION: PICTURE GALLERY -->
-    <section class="sectionSegments" id="ClubPhotoGallery">
+    <section id="gallery" class="sectionSegments" id="ClubPhotoGallery">
       <div class="w3-container" id="pictures">
         <div class="w3-content bodyStyle">
           <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide subtitle">Photo Gallery</span></h5>
@@ -292,7 +298,22 @@
       Site Last Updated: March 2020
     </footer>
 
+    <!-- Image gallery script -->
     <script src="ImageScript.js"> </script>
+    <!-- <script src="SiteScript.js"> </script> -->
+    <!-- When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar -->
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+    </script>
   </body>
 
 </wrapper>

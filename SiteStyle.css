@@ -1,29 +1,18 @@
-
 /**************************************
 STATIC LAYOUT CSS
 **************************************/
-
-
 wrapper {
   width: 100%; // can designate in px too, ex 960px
   margin: 0 auto; // margin “auto” keeps it centered (0 = at the top 0 margin, auto is centered in the middle)
-  padding: 200px 200px;
+  /* padding: 200px 200px; */
 }
 
-
-/* these 2 added from w3 schools ex:
-https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_cafe */
 body, html {
   height: 100%;
   font-family: "Candara", sans-serif;
-  padding: 5px;
-
-/*  font-family: "Inconsolata", sans-serif; */
-}
-
-/* color of entire site background */
-.test {
-  background-color: #65826d;
+  background-color: #fffafa; /* off white */
+  /* #65826d; */  /* green */
+  /* color of entire site background */
 }
 
 .menu {
@@ -32,31 +21,36 @@ body, html {
 
 header {
   width: 100%;
-  background-color: green;
-  padding: 15px;
- text-align: center;
- text-transform: uppercase;
- letter-spacing: 3px;
+  color: black;
+  padding: 8%;
+  /* gives logo and title space */
+  /* text */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   word-spacing: 8px;
-  font-size: 2.5em; /* 40px/16=2.5em */
+  font-size: 2.5em;
+  /* 40px/16=2.5em */
   font-weight: bold;
   line-height: 30px;
   white-space: : nowrap;
-  display: inline-block;
-  color: green;
-    filter: grayscale(90%); /* backdrop-filter */
-  -webkit-text-stroke-color: black; /* text outline */
-  -webkit-text-stroke-width: 1px;
-}
-
-.sitetitle {
-  box-sizing: border-box;
-  border: thick double black;
-  margin: 20px;
-  padding: 20px;
+  -webkit-text-stroke-color: black;
   overflow: hidden;
-  background-color: inherit;
-  color: green;
+
+  /* text outline */
+  -webkit-text-stroke-width: 1px;
+  /*  box-sizing: border-box; */
+  /* https://www.w3schools.com/css/css3_box-sizing.asp */
+  border-bottom: thick double black;
+  /*  margin: 20px; */
+
+  /* background image */
+  background-image: url('./resources/web_imgs/RedRocks_Fox.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* position: relative; */
+  filter: grayscale(40%) brightness(120%);
 }
 
 hdetail {
@@ -69,38 +63,32 @@ hdetail {
 }
 
 .bodyStyle {
-  max-width:  80%; // can designate in px too, ex 960px
+  /*align-content: center;*/
+  max-width: 80%; // can designate in px too, ex 960px
+  /* padding: 8%;
+  color: white; */
 }
 
 .clubInfoText {
-
+  padding: 50px;
+  /* space between info container and the text ending/starting */
 }
 
 .ulList {
-  list-style-type:none;
+  list-style-type: none;
 }
 
 h2 {
   text-indent: 30px;
 }
 
-.backgndHeader {
-    background-image: url('./resources/web_imgs/RedRocks_Fox.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    filter: grayscale(40%) brightness(120%);
-
-}
-
-.backgndInfo {
+.backgndEBACInfo {
   background-image: url('./resources/web_imgs/ElCapitan_cloudy.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   filter: grayscale(90%) brightness(120%);
   color: white;
-
 }
 
 .backgndResources {
@@ -111,43 +99,32 @@ h2 {
   filter: grayscale(90%);
 }
 
-.siteSections {
-  background-color: #E5E5E5; // rock grey
-  padding-left: 10vh;
-  padding-right: 10vh;
-  margin-bottom:10px;
-}
-
-.divclass {
-  background-color: #E5E5E5; // rock grey
-  padding-left: 10vh;
-  padding-right: 10vh;
-  margin-bottom:10px;
-}
-
 h5 {
   text-transform: uppercase;
 }
 
 div {
   text-align: justify;
-  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-  -moz-column-gap: 40px; /* Firefox */
+  -webkit-column-gap: 40px;
+  /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px;
+  /* Firefox */
   column-gap: 40px;
-
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .sectionSegments {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
   border-bottom: 5px solid black;
   /* color: white; */
   background-color: inherit;
-  p
-}
-
-.textTest {
-  padding: 8%;
-  color: white;
+  /*
+  padding-left: 10vh;
+  padding-right: 10vh; */
+  margin-bottom: 10px;
 }
 
 p {
@@ -157,19 +134,73 @@ p {
 .grid-container {
   display: grid;
   grid-gap: 50px 100px;
-    justify-content: center;
+  justify-content: center;
 }
 
 
 
-/**************************************
-CSS TO MAKE THIS SITE LOOK PRETTY
-**************************************/
+/**************************
+  NAVBAR
+***************************/
+/* Position the navbar to the top of the page */
+.navbar-container {
+  position: absolute;
+  /*  position: relative; */
+  /* margin: 20px; */
+justify-content: flex-end;
+
+  /* width: auto; */
+  width: 100%;
+  float: right;
+
+  height: auto;
+  z-index: 10;
+  /* <-- will keep navbar overlayed on top of any other site imgs */
+}
+
+#navbar {
+  /*background-color: #333; */
+  /* Black background color */
+  position: fixed;
+  /* Make it stick/fixed */
+  top: 0;
+  /* Stay on top */
+  transition: top 0.3s;
+
+  /* Transition effect when sliding down (and up) */
+}
+
+/* The navbar */
+.topnav {
+  /* float: right; */
+
+  overflow: hidden;
+  background-color: #333;
+  z-index: inherit;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left; /* order off list (top list member on left vs right)*/
+  color: #f2f2f2;
+  /*   color: white; */
+  text-align: center;
+  padding: 14px 16px;
+  /*   */
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: inherit;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
 
 /**************************************
 CSS TO MAKE IMAGE GALLERY LAYOUT
 **************************************/
-
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
@@ -184,14 +215,12 @@ div.gallery:hover {
 div.gallery img {
   width: 100%;
   height: auto;
-
 }
 
 div.desc {
   padding: 15px;
   text-align: center;
 }
-
 
 /**************************
 CSS TO Make Gallery Hovering
@@ -204,39 +233,19 @@ CSS TO Make Gallery Hovering
 }
 
 #myImg:hover {opacity: 0.7;} */
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-
-
 /*********************************
 MODAL LIGHTBOX(OVERLAP WITH MODAL -- FIX THIS LATER)
 **********************************/
 body {
   font-family: Verdana, sans-serif;
   margin: 0;
-
-
 }
 
 * {
   box-sizing: border-box;
 }
 
-.row > .column {
+.row>.column {
   padding: 0 8px;
 }
 
@@ -254,21 +263,34 @@ body {
 /* The Modal (background) */
 .modal {
   display: none;
+  /* Hidden by default */
   position: fixed;
+  /* Stay in place */
   z-index: 1;
+  /* Sit on top */
   padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
+  /* Full width */
   height: 100%;
+  /* Full height */
   overflow: auto;
+  /* Enable scroll if needed */
   background-color: #E5E5E5;
+  /*
+  background-color: rgb(0,0,0);  */
+  /* Fallback color */
+  /* background-color: rgba(0,0,0,0.9);  */
+  /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #57648C; /* blue */
+  background-color: #57648C;
+  /* blue */
   margin: auto;
   padding: 0;
   width: 90%;
@@ -293,7 +315,7 @@ body {
 
 .mySlides {
   display: inline-block;
-text-align: center;
+  text-align: center;
 }
 
 .myModals {
@@ -346,7 +368,6 @@ text-align: center;
 img {
   margin-bottom: -4px;
   border-radius: 4px;
-
 }
 
 .caption-container {
@@ -355,10 +376,10 @@ img {
   padding: 2px 16px;
   color: white;
   box-sizing: border-box;
-  border: thick double #57648C; /* same blue as title */
+  border: thick double #57648C;
+  /* same blue as title */
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
 
 .demo {
@@ -368,8 +389,8 @@ img {
 .active,
 .demo:hover {
   opacity: 1;
-  border: thick double #57648C; /* same blue as title */
-
+  border: thick double #57648C;
+  /* same blue as title */
 }
 
 img.hover-shadow {
