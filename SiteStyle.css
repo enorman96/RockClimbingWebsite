@@ -35,7 +35,6 @@ header {
   /*  box-sizing: border-box; */
   /* https://www.w3schools.com/css/css3_box-sizing.asp */
   /* line on the bottom */
-  border-bottom: thick double black;
   /*  margin: 20px; */
   /* background image */
   background-image: url('./resources/web_imgs/RedRocks_Fox.jpg');
@@ -86,12 +85,13 @@ headerText {
 }
 
 .testListNoImg {
-  padding: 70px;
   color: black;
+/*
+  padding: 70px;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 5%; */
   /* space between info container and the text ending/starting */
 }
 
@@ -146,8 +146,9 @@ headerText {
   float: left;
   padding-top: 5px;
   /* manually center text */
-  border-top: thick double black;
-  border-bottom: thick double black;
+/*  border-top: thick double black; */
+    border-top: 6px solid black;
+  border-bottom: 6px solid black;
   /*  bottom: 10px; */
   /* gap between bottom of element and the element below it */
 }
@@ -196,18 +197,22 @@ h5 {
 }
 
 .sectionSegments {
+  /* need to set display type to set wifth*/
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+
   width: 90%;
-  border-bottom: 5px solid black;
   /* color: white; */
   background-color: inherit;
   /*
   padding-left: 10vh;
   padding-right: 10vh; */
-  margin-bottom: 10px;
   max-width: 80%;
+
+  padding: 70px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   /* padding */
 }
 
@@ -373,6 +378,18 @@ body {
   margin: auto;
   padding: 0;
   width: 90%;
+}
+
+
+/* GOOGLE MAP API */
+
+.map_style {
+  min-width: 50vh
+}
+/* Set the size of the div element that contains the map */
+#map {
+ height: 400px;  /* The height is 400 pixels */
+ width: 100%;  /* The width is the width of the web page */
 }
 
 /* The Close Button */

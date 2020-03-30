@@ -1,4 +1,4 @@
-// 
+//
 // var coll = document.getElementsByClassName("collapsible");
 // var i;
 //
@@ -26,3 +26,5 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 /* Mountain project data API: https://www.mountainproject.com/data. Also look at google map API for route destimation overlay */
+
+/* google map api */
