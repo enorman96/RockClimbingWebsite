@@ -10,8 +10,10 @@ wrapper {
 body, html {
   height: 100%;
   font-family: "Candara", sans-serif;
-  background-color: #fffafa; /* off white */
-  /* #65826d; */  /* green */
+  background-color: #fffafa;
+  /* off white */
+  /* #65826d; */
+  /* green */
   /* color of entire site background */
 }
 
@@ -20,12 +22,38 @@ body, html {
 }
 
 header {
+  /* so window doesnt shrink smaller than header text when window is small */
+  min-height: 300px;
+  height: 100%;
+  /* will not resize when shrinking browser window */
   width: 100%;
   color: black;
-  padding: 8%;
+  /*  padding: 8%; */
   /* gives logo and title space */
-  /* text */
   text-align: center;
+  overflow: hidden;
+  /*  box-sizing: border-box; */
+  /* https://www.w3schools.com/css/css3_box-sizing.asp */
+  /* line on the bottom */
+  border-bottom: thick double black;
+  /*  margin: 20px; */
+  /* background image */
+  background-image: url('./resources/web_imgs/RedRocks_Fox.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  /*background-size: cover; */
+  filter: grayscale(40%) brightness(120%);
+}
+
+headerText {
+  position: relative;
+  top: 30vh;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  white-space: nowrap;
+  /* text */
   text-transform: uppercase;
   letter-spacing: 3px;
   word-spacing: 8px;
@@ -35,38 +63,13 @@ header {
   line-height: 30px;
   white-space: : nowrap;
   -webkit-text-stroke-color: black;
-  overflow: hidden;
-
   /* text outline */
   -webkit-text-stroke-width: 1px;
-  /*  box-sizing: border-box; */
-  /* https://www.w3schools.com/css/css3_box-sizing.asp */
-  border-bottom: thick double black;
-  /*  margin: 20px; */
-
-  /* background image */
-  background-image: url('./resources/web_imgs/RedRocks_Fox.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  /* position: relative; */
-  filter: grayscale(40%) brightness(120%);
-}
-
-hdetail {
-  white-space: nowrap;
 }
 
 .subtitle {
   border: thick double #57648C; // same blue as site title
   color: black;
-}
-
-.bodyStyle {
-  /*align-content: center;*/
-  max-width: 80%; // can designate in px too, ex 960px
-  /* padding: 8%;
-  color: white; */
 }
 
 .clubInfoText {
@@ -78,8 +81,85 @@ hdetail {
   list-style-type: none;
 }
 
-h2 {
-  text-indent: 30px;
+.testSpacing {
+  margin-top: 300px;
+}
+
+.testListNoImg {
+  padding: 70px;
+  color: black;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  /* space between info container and the text ending/starting */
+}
+
+.testList {
+  opacity: 0.6;
+  background-color: white;
+
+  padding: 70px;
+  color: black;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  /*   text-indent: 30px; */
+  /* space between info container and the text ending/starting */
+}
+
+.testBackground {
+  /* padding sets extra space around the textblock area */
+
+  /* background color */
+  background-image: url('./resources/web_imgs/ElCapitan_cloudy.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+/*  filter: grayscale(90%) brightness(120%); */
+
+
+    color: black;
+
+
+}
+
+/* backfround image stays static and the text over top scrolls over it */
+.backgroundImageStyle {
+
+  background: url('./resources/web_imgs/ElCapitan_cloudy.jpg') no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.sectHeader {
+  /*  min-width: 100%; */
+  /*  overflow: hidden;  contain floats */
+
+  width: 100%;
+  height: 40px;
+  background-color: grey;
+  color: white;
+  float: left;
+  padding-top: 5px;
+  /* manually center text */
+  border-top: thick double black;
+  border-bottom: thick double black;
+  /*  bottom: 10px; */
+  /* gap between bottom of element and the element below it */
+}
+
+.sectHeader t {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 8px;
+  font-size: 1em;
 }
 
 .backgndEBACInfo {
@@ -103,7 +183,9 @@ h5 {
   text-transform: uppercase;
 }
 
-div {
+
+
+.divStyle {
   text-align: justify;
   -webkit-column-gap: 40px;
   /* Chrome, Safari, Opera */
@@ -125,6 +207,8 @@ div {
   padding-left: 10vh;
   padding-right: 10vh; */
   margin-bottom: 10px;
+  max-width: 80%;
+  /* padding */
 }
 
 p {
@@ -137,8 +221,6 @@ p {
   justify-content: center;
 }
 
-
-
 /**************************
   NAVBAR
 ***************************/
@@ -147,12 +229,10 @@ p {
   position: absolute;
   /*  position: relative; */
   /* margin: 20px; */
-justify-content: flex-end;
-
+  justify-content: flex-end;
   /* width: auto; */
   width: 100%;
   float: right;
-
   height: auto;
   z-index: 10;
   /* <-- will keep navbar overlayed on top of any other site imgs */
@@ -166,14 +246,12 @@ justify-content: flex-end;
   top: 0;
   /* Stay on top */
   transition: top 0.3s;
-
   /* Transition effect when sliding down (and up) */
 }
 
 /* The navbar */
 .topnav {
   /* float: right; */
-
   overflow: hidden;
   background-color: #333;
   z-index: inherit;
@@ -181,7 +259,8 @@ justify-content: flex-end;
 
 /* Navbar links */
 .topnav a {
-  float: left; /* order off list (top list member on left vs right)*/
+  float: left;
+  /* order off list (top list member on left vs right)*/
   color: #f2f2f2;
   /*   color: white; */
   text-align: center;
@@ -365,10 +444,11 @@ body {
   top: 0;
 }
 
+/* TODO assign just for gallery pictures
 img {
   margin-bottom: -4px;
   border-radius: 4px;
-}
+} */
 
 .caption-container {
   text-align: center;
