@@ -1,0 +1,400 @@
+
+    <!-- SECTION: PICTURE GALLERY -->
+    <sectionHeader id="gallery" class="sectHeader">
+      <t>Photo Gallery</t>
+    </sectionHeader>
+    <section class="sectionSegments" id="ClubPhotoGallery">
+      <div class="w3-container" id="pictures">
+        <div class="w3-content">
+          <!-- PICTURE GALLERY / Images used to open the lightbox -->
+          <div class="row">
+            <div class="column">
+              <img src="./resources/RaggedMtJune2019/Gabe1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RaggedMtJune2019/Gabe2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RaggedMtJune2019/Group1.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RaggedMtJune2019/Kile1.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RaggedMtJune2019/Kile2.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RaggedMtJune2019/Matt1.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RaggedMtJune2019/Ragged1.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RaggedMtJune2019/SadKile.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RappelPics_2019August/1.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RappelPics_2019August/2.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RappelPics_2019August/3.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RappelPics_2019August/4.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/RappelPics_2019August/5.jpg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="./resources/Teaching/LH_settingrope.jpg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+            </div>
+          </div>
+
+
+          <!-- PICTURE GALLERY / The Modal/Lightbox -->
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <div class="numbertext">1 / 14</div>
+                <img src="./resources/RaggedMtJune2019/Gabe1.jpg" class="myModals" alt="Ragged Mountain">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">2 / 14</div>
+                <img src="./resources/RaggedMtJune2019/Gabe2.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">3 / 14</div>
+                <img src="./resources/RaggedMtJune2019/Group1.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">4 / 14</div>
+                <img src="./resources/RaggedMtJune2019/Kile1.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">5 / 14</div>
+                <img src="./resources/RaggedMtJune2019/Kile2.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">6 / 14</div>
+                <img src="./resources/RaggedMtJune2019/Matt1.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">7 / 14</div>
+                <img src="./resources/RaggedMtJune2019/Ragged1.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">8 / 14</div>
+                <img src="./resources/RaggedMtJune2019/SadKile.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">9 / 14</div>
+                <img src="./resources/RappelPics_2019August/1.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">10 / 14</div>
+                <img src="./resources/RappelPics_2019August/2.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">11 / 14</div>
+                <img src="./resources/RappelPics_2019August/3.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">12 / 14</div>
+                <img src="./resources/RappelPics_2019August/4.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">13 / 14</div>
+                <img src="./resources/RappelPics_2019August/5.jpg" class="myModals">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">14 / 14</div>
+                <img src="./resources/Teaching/LH_settingrope.jpg" class="myModals">
+              </div>
+
+
+              <!-- PICTURE GALLERY / Next/previous controls -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <!-- PICTURE GALLERY / Caption text -->
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+
+              <!-- PICTURE GALLERY / Thumbnail image controls -->
+              <div class="column">
+                <img class="demo cursor" src="./resources/RaggedMtJune2019/Gabe1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Ragged Mountain">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RaggedMtJune2019/Gabe2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Ragged Mountain">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RaggedMtJune2019/Group1.jpg" style="width:100%" onclick="currentSlide(3)" alt="Ragged Mountain">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RaggedMtJune2019/Kile1.jpg" style="width:100%" onclick="currentSlide(4)" alt="Ragged Mountain">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RaggedMtJune2019/Kile2.jpg" style="width:100%" onclick="currentSlide(5)" alt="Ragged Mountain">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RaggedMtJune2019/Matt1.jpg" style="width:100%" onclick="currentSlide(6)" alt="Ragged Mountain">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RaggedMtJune2019/Ragged1.jpg" style="width:100%" onclick="currentSlide(7)" alt="Ragged Mountain">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RaggedMtJune2019/SadKile.jpg" style="width:100%" onclick="currentSlide(8)" alt="Ragged Mountain">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RappelPics_2019August/1.jpg" style="width:100%" onclick="currentSlide(9)" alt="Ragged Mountain">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RappelPics_2019August/2.jpg" style="width:100%" onclick="currentSlide(10)" alt="Lantern Hill">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RappelPics_2019August/3.jpg" style="width:100%" onclick="currentSlide(11)" alt="Lantern Hill">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RappelPics_2019August/4.jpg" style="width:100%" onclick="currentSlide(12)" alt="Lantern Hill: Top Looking Down">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/RappelPics_2019August/5.jpg" style="width:100%" onclick="currentSlide(13)" alt="Ragged Mountain">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./resources/Teaching/LH_settingrope.jpg" style="width:100%" onclick="currentSlide(14)" alt="Lantern Hill: Teaching Top-Rope Setup">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <sectionHeader id="contact" class="sectHeader">
+      <t>Point of Contact: Gabe Schwartz gschwartz@gdeb.com</t>
+    </sectionHeader>
+
+    <!-- SECTION: UPDATED FOOTER -->
+    <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+      Site Last Updated: March 2020
+    </footer>
+
+    <!-- Image gallery script -->
+    <script src="ImageScript.js"> </script>
+    <!-- <script src="SiteScript.js"> </script> -->
+    <!-- When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar -->
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+    </script>
+
+<style>
+  /*********************************
+  MODAL LIGHTBOX(OVERLAP WITH MODAL -- FIX THIS LATER)
+  **********************************/
+  body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .row>.column {
+    padding: 0 8px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    float: left;
+    width: 25%;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #E5E5E5;
+    /*
+    background-color: rgb(0,0,0);  */
+    /* Fallback color */
+    /* background-color: rgba(0,0,0,0.9);  */
+    /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #57648C;
+    /* blue */
+    margin: auto;
+    padding: 0;
+    width: 90%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .mySlides {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .myModals {
+    height: 100%;
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* TODO assign just for gallery pictures
+  img {
+    margin-bottom: -4px;
+    border-radius: 4px;
+  } */
+
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+    box-sizing: border-box;
+    border: thick double #57648C;
+    /* same blue as title */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+    border: thick double #57648C;
+    /* same blue as title */
+  }
+
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.7;
+  }
+
+
+  /**************************************
+  CSS TO MAKE IMAGE GALLERY LAYOUT
+  **************************************/
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+  </style>
