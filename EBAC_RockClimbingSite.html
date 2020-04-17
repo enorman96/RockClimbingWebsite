@@ -148,99 +148,97 @@
       </table>
     </section>
 
+
     <sectionHeader id="gallery" class="sectHeader">
       <t>Photo Gallery</t>
     </sectionHeader>
+
+    <!-- IMAGES WITH CAPTIONS THAT APPEAR WHEN MOUSED OVER -->
     <section class="sectionSegments">
       <div class="row">
         <div class="column">
-    <!--      <div class="galleryContainer">
-            <img src="./resources/RaggedMtJune2019/Gabe1.jpg" alt="Ragged1" class="galleryImage" style="width:100%">
-            <div class="bottomRight">
-              <div class="captionText">Ragged Mt</div>
-            </div>
-          </div>--> 
-          <img src="./resources/RaggedMtJune2019/Gabe1.jpg">
-          <img src="./resources/RaggedMtJune2019/Gabe2.jpg">
-          <img src="./resources/RaggedMtJune2019/Group1.jpg">
-          <img src="./resources/RaggedMtJune2019/Kile1.jpg">
+          <div class="galleryContainer">
+            <img id="1" src="./resources/RaggedMtJune2019/Gabe1.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Ragged Mt</div>
+          </div>
+          <div class="galleryContainer">
+            <img id="2" src="./resources/RaggedMtJune2019/Gabe2.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Ragged Mt</div>
+          </div>
+          <div class="galleryContainer">
+            <img id="3" src="./resources/RaggedMtJune2019/Group1.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Ragged Mt</div>
+          </div>
+          <div class="galleryContainer">
+            <img id="4" src="./resources/RaggedMtJune2019/Kile1.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Ragged Mt</div>
+          </div>
         </div>
         <div class="column">
-          <img src="./resources/Teaching/LH_settingrope.jpg">
-          <img src="./resources/RaggedMtJune2019/Kile2.jpg">
-          <img src="./resources/RappelPics_2019August/4.jpg">
-          <img src="./resources/RappelPics_2019August/5.jpg">
+          <div class="galleryContainer">
+            <img id="5" src="./resources/Teaching/LH_settingrope.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Lantern Hill</div>
+          </div>
+          <div class="galleryContainer">
+            <img id="6" src="./resources/RaggedMtJune2019/Kile2.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Ragged Mt</div>
+          </div>
+          <div class="galleryContainer">
+            <img id="7" src="./resources/RappelPics_2019August/4.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Lantern Hill</div>
+          </div>
+          <div class="galleryContainer">
+            <img id="8" src="./resources/RappelPics_2019August/5.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">The Gunks</div>
+          </div>
         </div>
         <div class="column">
-          <img src="./resources/RappelPics_2019August/1.jpg">
-          <img src="./resources/RappelPics_2019August/2.jpg">
-          <img src="./resources/RappelPics_2019August/3.jpg">
+          <div class="galleryContainer">
+            <img id="9" src="./resources/RappelPics_2019August/1.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Lantern Hill</div>
+          </div>
+          <div class="galleryContainer">
+            <img id="10" src="./resources/RappelPics_2019August/2.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Lantern Hill</div>
+          </div>
+          <div class="galleryContainer">
+            <img id="11" src="./resources/RappelPics_2019August/3.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Lantern Hill</div>
+          </div>
         </div>
         <div class="column">
-          <img src="./resources/RaggedMtJune2019/Matt1.jpg">
-          <img src="./resources/RaggedMtJune2019/Ragged1.jpg">
-          <img src="./resources/RaggedMtJune2019/SadKile.jpg">
+          <div class="galleryContainer">
+            <img id="12" src="./resources/RaggedMtJune2019/Matt1.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Ragged Mt</div>
+          </div>
+          <div class="galleryContainer">
+            <img id="13" src="./resources/RaggedMtJune2019/Ragged1.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Ragged Mt</div>
+          </div>
+          <div class="galleryContainer">
+            <img id="14" src="./resources/RaggedMtJune2019/SadKile.jpg" alt="Ragged Mt" class="galleryImg">
+            <div class="overlay">Ragged Mt</div>
+          </div>
         </div>
+
+        <script>
+        // add event listener for clicked gallery images
+        document.addEventListener('click', function(e) {
+     e = e || window.event;
+     var target = e.target;
+     if(target.tagName == 'IMG' && target.classList.contains('galleryImg')){ console.log(target.src);console.log(target.id); }
+    }, false);
+
+        </script>
     </section>
 
 
-    <sectionHeader id="gallery" class="sectHeader">
-      <t>Photo Gallery</t>
-    </sectionHeader>
-    <section class="sectionSegments">
-      <!-- PICTURE GALLERY / The Modal/Lightbox -->
-      <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-
-          <div class="mySlides_2">
-            <div class="numbertext">1 / 14</div>
-            <img src="./resources/RaggedMtJune2019/Gabe1.jpg" class="myModals_2" alt="Ragged Mountain">
-          </div>
-
-          <!-- PICTURE GALLERY / Next/previous controls -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-          <!-- PICTURE GALLERY / Caption text -->
-          <div class="caption-container">
-            <p id="caption_2"></p>
-          </div>
-
-          <!-- PICTURE GALLERY / Thumbnail image controls -->
-          <div class="column">
-            <img class="demo cursor" src="./resources/RaggedMtJune2019/Gabe1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Ragged Mountain">
-          </div>
-        </div>
-      </div>
-
-      <script>
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementById('myImg');
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        img.onclick = function() {
-          modal.style.display = "block";
-          modalImg.src = this.src;
-          captionText.innerHTML = this.alt;
-        }
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-          modal.style.display = "none";
-        }
-      </script>
-
-    </section>
+    <!-- SECTION: UPDATED FOOTER -->
+    <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+      Site Last Updated: March 2020
+    </footer>
 
   </body>
-
 </wrapper>
 
 </html>

@@ -145,14 +145,14 @@ function initMap() {
 
   var marker_CRG_Glas = new google.maps.Marker({
     position: CRG_Glas_Posit,
-    label: "CRG",
+    label: "CRG Glastonbury",
     map: map,
     icon: iconPurple
   });
 
   var marker_CRG_War = new google.maps.Marker({
     position: CRG_Warwick_Posit,
-    label: "CRG",
+    label: "CRG Warwick",
     map: map,
     icon: iconPurple
   });

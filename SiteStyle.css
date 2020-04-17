@@ -27,7 +27,7 @@ footer {
 header {
   /* so window doesnt shrink smaller than header text when window is small */
   min-height: 300px;
-  height: 100%;
+  height: 90%;
   /* will not resize when shrinking browser window */
   width: 100%;
   color: black;
@@ -182,6 +182,7 @@ STATIC LAYOUT CSS FOR BODY AREA
   position: fixed;
   /* Make it stick/fixed */
   top: 0;
+  right: 0;
   /* Stay on top */
   transition: top 0.3s;
   /* Transition effect when sliding down (and up) */
@@ -239,15 +240,22 @@ CSS TO Make Google Map API
 /**************************
  IMAGE GALLERY: DISPLAY ALL IMGS ON ONE PAGE
 ***************************/
-gallery-img. {
+
+.galleryImg {
   /* image will scale down if it has to (ex if browser window is resized),
    but never scale up to be larger than its original size, */
-  opacity: 1;
-  max-width: 100%;
+/*  max-width: 100%;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
+  */
+  display: block;
+ width: 100%;
+ height: auto;
+ transition: 0.3s;
+
 }
+
 
 /* Use CSS Flexbox to create responsive layout */
 .row {
@@ -261,6 +269,7 @@ gallery-img. {
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
+  box-sizing: border-box;
 }
 
 .column img {
@@ -288,36 +297,62 @@ gallery-img. {
 /**************************
 IMAGE GALLERY: OVERLAY TEXT ONTO IMG
 ***************************/
-.galleryContainer {
-  position: relative;
-  width: 50%;
+/* When you mouse over the container, fade in the overlay title */
+.galleryImg:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.8;
 }
 
-.container:hover .galleryImage {
-  opacity: 0.7;
-}
-
-.bottomRight {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container:hover .bottomRight {
+/* upon hovering over any part of image (.galleryImg), caption will appear (.overlay) */
+.galleryImg:hover~.overlay{
+  /*  display: block; */
   opacity: 1;
 }
 
-.captionText {
-  background-color: #4CAF50;
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
   color: white;
-  font-size: 16px;
-  padding: 16px 32px;
+  font-size: 15px;
+  padding: 8px;
+  text-align: center;
 }
+/*
+.overlay:hover {
+  opacity: 1;
+} */
+/* Bottom text */
+.bottomOverlay {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Container needed to position the overlayed caption. Adjust the width as needed */
+/* galleryContainer attriubutes copied from glleryImg */
+.galleryContainer {
+  opacity: 1;
+  max-width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  position: relative;
+  color: white;
+}
+
+.galleryContainer:hover {
+  opacity: 1;
+}
+
+
+
 
 /**************************
 IGNORE TODO DELETE
