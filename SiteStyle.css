@@ -10,7 +10,7 @@ wrapper {
 body, html {
   height: 100%;
   font-family: "Candara", sans-serif;
-  background-color: #fffafa;
+  /*background-color: #fffafa; */
   /* off white */
   /* #65826d; */
   /* green */
@@ -26,48 +26,56 @@ footer {
 
 header {
   /* so window doesnt shrink smaller than header text when window is small */
-  min-height: 300px;
+  min-width: 100%;
+  min-height: 500px;
   height: 90%;
   /* will not resize when shrinking browser window */
-  width: 100%;
+
   color: black;
-  /*  padding: 8%; */
-  /* gives logo and title space */
+
   text-align: center;
   overflow: hidden;
+
+  background-image: url('./resources/web_imgs/RedRocks_Fox.jpg'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(40%) brightness(120%);
+  background-size: cover;
+   vertical-align: center;
+  /*  padding: 8%; */
+  /* gives logo and title space */
   /*  box-sizing: border-box; */
   /* https://www.w3schools.com/css/css3_box-sizing.asp */
   /* line on the bottom */
   /*  margin: 20px; */
   /* background image */
-  background-image: url('./resources/web_imgs/RedRocks_Fox.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  /*background-size: cover; */
-  filter: grayscale(40%) brightness(120%);
 }
 
 headerText {
+   vertical-align: center;
+  min-width: inherit;
   position: relative;
-  top: 30vh;
-  padding-top: 10px;
+  top: 0;
+  padding-top: auto;
+  padding-bottom: auto;
+
   padding-right: 30px;
-  padding-bottom: 50px;
   padding-left: 30px;
   white-space: nowrap;
   /* text */
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   word-spacing: 8px;
-  font-size: 2.5em;
+  font-size: 3.5em;
   /* 40px/16=2.5em */
   font-weight: bold;
-  line-height: 30px;
+  line-height: 100px;
   white-space: : nowrap;
   -webkit-text-stroke-color: black;
   /* text outline */
   -webkit-text-stroke-width: 1px;
 }
+
 
 /**************************
   SECTION HEADER STYLES
@@ -76,15 +84,14 @@ headerText {
   /*  min-width: 100%; */
   /*  overflow: hidden;  contain floats */
   width: 100%;
-  height: 40px;
-  background-color: grey;
-  color: white;
+/*  background-color: black; */
+/*  color: white; */
   float: left;
-  padding-top: 5px;
+  padding-left: 20px;
   /* manually center text */
   /*  border-top: thick double black; */
   border-top: 6px solid black;
-  border-bottom: 6px solid black;
+/*  border-bottom: 6px solid black; */
   /*  bottom: 10px; */
   /* gap between bottom of element and the element below it */
 }
@@ -96,7 +103,7 @@ headerText {
   text-transform: uppercase;
   letter-spacing: 3px;
   word-spacing: 8px;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 /**************************************
@@ -114,6 +121,13 @@ STATIC LAYOUT CSS FOR BODY AREA
 .testSpacing {
   margin-top: 300px;
 }
+
+.testSpacing li {
+  font-family: "Candara", sans-serif;
+  font-size: 1em;
+
+}
+
 
 .testListNoImg {
   color: black;
@@ -159,6 +173,50 @@ STATIC LAYOUT CSS FOR BODY AREA
   justify-content: center;
 }
 
+.sideBySideSegments {
+  overflow: hidden;
+  /* need to set display type to set wifth*/
+  display: inline-block;
+  background-color: inherit;
+
+  margin-left: auto;
+  margin-right: auto;
+  /*
+  padding-left: 10%;
+  padding-right: 10%; */
+  /* padding */
+  justify-content: center;
+
+}
+/* Column container */
+.bodyRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+
+}
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+.aboutUs {
+  display: inline-block;
+}
+
+.contactInfo {
+  float: right;
+  display: inline-block;
+
+}
 /**************************
   NAVBAR
 ***************************/
@@ -182,7 +240,7 @@ STATIC LAYOUT CSS FOR BODY AREA
   position: fixed;
   /* Make it stick/fixed */
   top: 0;
-  right: 0;
+  right: 30px;
   /* Stay on top */
   transition: top 0.3s;
   /* Transition effect when sliding down (and up) */
@@ -191,8 +249,8 @@ STATIC LAYOUT CSS FOR BODY AREA
 /* The navbar */
 .topnav {
   /* float: right; */
+  /*   background-color: #333; */
   overflow: hidden;
-  background-color: #333;
   z-index: inherit;
 }
 
@@ -209,6 +267,7 @@ STATIC LAYOUT CSS FOR BODY AREA
   text-decoration: none;
   font-size: 17px;
   z-index: inherit;
+  font-weight: bold;
 }
 
 .topnav a:hover {
@@ -219,15 +278,12 @@ STATIC LAYOUT CSS FOR BODY AREA
 /**************************
 CSS TO Make Google Map API
 **************************/
-.map_style {
-  min-width: 50vh
-}
 
 /* Set the size of the div element that contains the map */
 #map {
-  height: 30%;
+  height: inherit;
   /* The height is 400 pixels */
-  width: 30%;
+  width: inherit;
   /* The width is %  width of the web page */
   min-width: 400px;
   min-height: 300px

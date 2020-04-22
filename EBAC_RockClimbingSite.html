@@ -22,6 +22,8 @@
 
 <wrapper>
 
+  <!-- Appears on tab in web browser -->
+
   <head>
     <title>
       EBAC Rock Climbing Club
@@ -35,7 +37,6 @@
       <div class="topnav" id="navbar">
         <a href="#about">About</a>
         <a href="#locations">Locations</a>
-        <a href="#contact">Contact</a>
         <a href="#gallery">Gallery</a>
       </div>
     </nav>
@@ -44,108 +45,102 @@
     <header>
       <!-- sub logo with club name  -->
       <headerText>
-        <img src="./resources/HeaderImgs/sub_logo2.png">
-        EBAC Rock Climbing
-        <img src="./resources/HeaderImgs/sub_logo1.png">
+        <div>EBAC</div>
+        <div><img src="./resources/HeaderImgs/sub_logo_center.png"> </div>
+        <div>Rock Climbing</div>
       </headerText>
     </header>
 
-
-    <!--
-  SECTION: CLIMBING INFORMATION
-  -->
-    <sectionHeader id="about" class="sectHeader">
-      <t>About Club Climbing</t>
+    <!--  <sectionHeader id="about">
     </sectionHeader>
+-->
+    <section class="sideBySideSegments" id="about">
+      <!-- The flexible grid (content) -->
 
-    <section class="sectionSegments">
-      <ul class="testListNoImg">
-        <li>The goal of the climbing club is to provide a safe and friendly atmosphere to learn how to climb outside.</li>
-        <li>The club has about 40 participants, so it is easy to get a group together to meet up at nearby climbing gyms, or to set up a day of outdoor climbing at one of the local crags. </li>
-        <li>During the climbing season, the club meets weekly to climb outside.</li>
-        <li>Some gear is available for all club members to use:
-          <ul>
-            <li>harness</li>
-            <li>climbing shoes</li>
-            <li>helmet</li>
-            <li>belay device</li>
-            <li>discounted $12 passes to Rock Spot</li>
-            <li>discounted $12 passed to Central Rock Gym Warwick & Glastonbury</li>
+      <div class="bodyRow">
+        <div class="side" "contactInfo">
+          <h2> Overview </h2>
+          <div>The goal of the climbing club is to provide a safe and friendly atmosphere to learn how to climb outside</div>
+          <h2> Contact </h2>
+          <div> Gabe </div>
+        </div>
+        <div class="main" "aboutUs">
+          <h2> ABOUT US </h2>
+          <ul class="testListNoImg">
+            <li>The club has about 40 participants, so it is easy to get a group together to meet up at nearby climbing gyms, or to set up a day of outdoor climbing at one of the local crags. </li>
+            <li>During the climbing season, the club meets weekly to climb outside.</li>
+            <li>More experienced climbers teach newer climbers skills such as belaying, setting anchors, and rappelling. Climbers looking for more can also learn how to lead climb.</li>
+            <li>Club-owned gear & discounts are available for all club members to use:
+              <ul>
+                <li>harness</li>
+                <li>climbing shoes</li>
+                <li>helmet</li>
+                <li>belay device</li>
+                <li>discounted $12 passes to Rock Spot</li>
+                <li>discounted $12 passed to Central Rock Gym Warwick & Glastonbury</li>
+              </ul>
+            </li>
+            <li> Dues are $25/year</li>
           </ul>
-        </li>
-        <li>More experienced climbers teach newer climbers skills such as belaying, setting anchors, and rappelling. Climbers looking for more can also learn how to lead climb.</li>
-        <li> Dues are $25/year</li>
-      </ul>
+        </div>
+      </div>
     </section>
-
     <!--
   SECTION: CLIMBING INFORMATION
   -->
 
 
-
-    <sectionHeader id="locations" class="sectHeader">
-      <t>Local Climbing Locations</t>
-    </sectionHeader>
-
-    <!-- CLIMBING INFORMATION / LINKS TO CLIMBING DESTINATIONS -->
-    <section class="sectionSegments">
-
-      <table class="w3-table">
-
-        <tr>
+    <!-- MAP LOCATIONS & LINKS TO CLIMBING -->
+    <section class="sideBySideSegments" id="locations">
+      <div class="bodyRow">
+        <div class="side">
           <!-- google map api on left -->
-          <th class="map_style">
+          <h2>Locations</h2>
 
-            <div id="map"></div>
-            <script src="ImageScript.js"> </script>
-
-            <!--Load the API from the specified URL
+          <div id="map"></div>
+          <script src="MapScript.js"> </script>
+          <!--Load the API from the specified URL
             * The async attribute allows the browser to render the page while the API loads
             * The key parameter will contain your own API key (which is not needed for this tutorial)
             * The callback parameter executes the initMap() function
             -->
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWPGSjq6uLeV0TC3YuTKPrnAc9-eiZ6UU&callback=initMap">
-            </script>
-          </th>
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWPGSjq6uLeV0TC3YuTKPrnAc9-eiZ6UU&callback=initMap">
+          </script>
+        </div>
 
-          <!-- list of locations on right of map api -->
-          <th>
-            <h3>OUTDOORS</h3>
-            <h4>There are many other crags in the area, but these are the places the EBAC climbs as a group:</h4>
-            <ul class="testListNoImg" style="list-style-image: url('http://maps.google.com/mapfiles/ms/icons/green-dot.png')">
-              <li>
-                <a href="https://www.mountainproject.com/area/106583848/lantern-hill" title="LanternHill" target="_blank" class="w3-hover-text-green">Lantern Hill,</a>
-                North Stonington is a short hike near EB's Eagle Park facility.
-              </li>
-              <li>
-                <a href="https://www.mountainproject.com/area/108314153/ragged-mountain" title="Ragged" target="_blank" class="w3-hover-text-green">Ragged Mountain,</a>
-                central CT has about 90 routes. It has both Trad and Toprope routes available.
-              </li>
-              <li>
-                <a href="http://climbri.org/beach.htm" title="BeachPond" target="_blank" class="w3-hover-text-green">Beach Pond,</a>
-                Exeter RI is a small crag with a handful of short bolted routes.
-              </li>
-              <li>
-                <a href="http://climbri.org/ross.htm" title="RossPond" target="_blank" class="w3-hover-text-green">Ross Pond,</a>
-                Killingly CT has three main walls of varying height.
+        <div class="main">
+          <h3>Climb Outside</h3>
+          <div>There are many other crags in the area, but these are places that EBAC climbs as a group:</div>
+          <ul class="testListNoImg" style="list-style-image: url('http://maps.google.com/mapfiles/ms/icons/green-dot.png')">
+            <li>
+              <a href="https://www.mountainproject.com/area/106583848/lantern-hill" title="LanternHill" target="_blank" class="w3-hover-text-green">Lantern Hill,</a>
+              North Stonington is a short hike near EB's Eagle Park facility.
+            </li>
+            <li>
+              <a href="https://www.mountainproject.com/area/108314153/ragged-mountain" title="Ragged" target="_blank" class="w3-hover-text-green">Ragged Mountain,</a>
+              central CT has about 90 routes. It has both Trad and Toprope routes available.
+            </li>
+            <li>
+              <a href="http://climbri.org/beach.htm" title="BeachPond" target="_blank" class="w3-hover-text-green">Beach Pond,</a>
+              Exeter RI is a small crag with a handful of short bolted routes.
+            </li>
+            <li>
+              <a href="http://climbri.org/ross.htm" title="RossPond" target="_blank" class="w3-hover-text-green">Ross Pond,</a>
+              Killingly CT has three main walls of varying height.
+            </li>
+          </ul>
+          <h3>Climb Inside</h3>
+          <div>The club is partnered with a couple local gyms to provide $12 day passes (please note, you must be an EBAC Rock Climbing Club member to use the discount):</div>
+          <ul class="testListNoImg" style="list-style-image: url('http://maps.google.com/mapfiles/ms/icons/purple-dot.png')">
+            <li> <a href="https://peacedale.rockspotclimbing.com/" title="RockSpot" target="_blank" class="w3-hover-text-green">Rock Spot</a>
+              (Peacedale, RI)
+            </li>
+            <li> <a href="https://centralrockgym.com/warwick/" title="CRG" target="_blank" class="w3-hover-text-green">Central Rock Gym</a>
+              (Warwick, RI / Glastonbury, CT)
+            </li>
+          </ul>
+        </div>
 
-              </li>
-            </ul>
-
-            <h3>INDOORS </h3>
-            <h4>The club is partnered with a couple local gyms to provide $12 day passes (please note, you must be an EBAC Rock Climbing Club member to use the discount):</h4>
-            <ul class="testListNoImg" style="list-style-image: url('http://maps.google.com/mapfiles/ms/icons/purple-dot.png')">
-              <li> <a href="https://peacedale.rockspotclimbing.com/" title="RockSpot" target="_blank" class="w3-hover-text-green">Rock Spot</a>
-                (Peacedale, RI)
-              </li>
-              <li> <a href="https://centralrockgym.com/warwick/" title="CRG" target="_blank" class="w3-hover-text-green">Central Rock Gym</a>
-                (Warwick, RI / Glastonbury, CT)
-              </li>
-            </ul>
-          </th>
-        </tr>
-      </table>
     </section>
 
 
@@ -222,13 +217,15 @@
         </div>
 
         <script>
-        // add event listener for clicked gallery images
-        document.addEventListener('click', function(e) {
-     e = e || window.event;
-     var target = e.target;
-     if(target.tagName == 'IMG' && target.classList.contains('galleryImg')){ console.log(target.src);console.log(target.id); }
-    }, false);
-
+          // add event listener for clicked gallery images
+          document.addEventListener('click', function(e) {
+            e = e || window.event;
+            var target = e.target;
+            if (target.tagName == 'IMG' && target.classList.contains('galleryImg')) {
+              console.log(target.src);
+              console.log(target.id);
+            }
+          }, false);
         </script>
     </section>
 
