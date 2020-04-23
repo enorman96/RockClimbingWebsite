@@ -25,6 +25,8 @@ footer {
 }
 
 header {
+  display: table; /* will emable us to center content by formatting as a table*/
+
   /* so window doesnt shrink smaller than header text when window is small */
   min-width: 100%;
   min-height: 500px;
@@ -36,7 +38,7 @@ header {
   text-align: center;
   overflow: hidden;
 
-  background-image: url('./resources/web_imgs/RedRocks_Fox.jpg'); 
+  background-image: url('./resources/web_imgs/RedRocks_Fox.jpg');
   background-repeat: no-repeat;
   background-position: center;
   filter: grayscale(40%) brightness(120%);
@@ -51,29 +53,20 @@ header {
   /* background image */
 }
 
+.semiOpaque {
+  background-color: black;
+}
+
 headerText {
-   vertical-align: center;
   min-width: inherit;
   position: relative;
-  top: 0;
-  padding-top: auto;
-  padding-bottom: auto;
-
-  padding-right: 30px;
-  padding-left: 30px;
   white-space: nowrap;
-  /* text */
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  word-spacing: 8px;
-  font-size: 3.5em;
-  /* 40px/16=2.5em */
-  font-weight: bold;
-  line-height: 100px;
-  white-space: : nowrap;
-  -webkit-text-stroke-color: black;
-  /* text outline */
-  -webkit-text-stroke-width: 1px;
+
+}
+
+.centered {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 
