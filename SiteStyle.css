@@ -7,6 +7,14 @@ wrapper {
   /* padding: 200px 200px; */
 }
 
+innerWrapper {
+  padding: 30px;
+}
+
+.headerImg {
+background-color: rgba(255, 255, 255, 0.3); // red with opacity
+}
+
 body, html {
   height: 100%;
   font-family: "Candara", sans-serif;
@@ -37,8 +45,9 @@ header {
 
   text-align: center;
   overflow: hidden;
+  /* background-image: url('./resources/web_imgs/RedRocks_Fox.jpg'); */
 
-  background-image: url('./resources/web_imgs/RedRocks_Fox.jpg');
+  background-image: url('./resources/web_imgs/GreekIslands.jpg');
   background-repeat: no-repeat;
   background-position: center;
   filter: grayscale(40%) brightness(120%);
@@ -51,10 +60,6 @@ header {
   /* line on the bottom */
   /*  margin: 20px; */
   /* background image */
-}
-
-.semiOpaque {
-  background-color: black;
 }
 
 headerText {
@@ -167,13 +172,12 @@ STATIC LAYOUT CSS FOR BODY AREA
 }
 
 .sideBySideSegments {
+  width: 100%;
   overflow: hidden;
   /* need to set display type to set wifth*/
   display: inline-block;
   background-color: inherit;
 
-  margin-left: auto;
-  margin-right: auto;
   /*
   padding-left: 10%;
   padding-right: 10%; */
@@ -190,61 +194,76 @@ STATIC LAYOUT CSS FOR BODY AREA
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex: 30%;
+  flex: 25%;
   background-color: #f1f1f1;
-  padding: 20px;
-
+  padding: 50px;
 }
+
 /* Main column */
 .main {
   flex: 70%;
   background-color: white;
-  padding: 20px;
-}
-.aboutUs {
-  display: inline-block;
+  padding: 30px;
 }
 
-.contactInfo {
-  float: right;
-  display: inline-block;
 
+.sideMap {
+  flex: 30%;
+  background-color: #B39F9F;
+  padding: 0px 50px;
 }
+
+/* Main column */
+.mainMapText {
+  flex: 50%;
+  /* background-color: #663500; */ /* dark brown*/
+  /* background-color: #986554; */ /* light brown*/
+  background-color: #B39F9F;  /* red brown*/
+  padding: 30px;
+}
+
 /**************************
   NAVBAR
 ***************************/
 /* Position the navbar to the top of the page */
 .navbar-container {
   position: absolute;
-  /*  position: relative; */
   /* margin: 20px; */
   justify-content: flex-end;
-  /* width: auto; */
-  width: 100%;
-  float: right;
+  align: right;
+  width: auto;
+  right: 0px;
   height: auto;
   z-index: 10;
+  /* width: 300px; */
+
   /* <-- will keep navbar overlayed on top of any other site imgs */
 }
 
-#navbar {
+
+/* #navbar {
+  align: right; */
+
   /*background-color: #333; */
   /* Black background color */
-  position: fixed;
+ /* position: fixed; */ /* fixed position sticks to top of page no matter where scroll is */
   /* Make it stick/fixed */
-  top: 0;
-  right: 30px;
+
   /* Stay on top */
-  transition: top 0.3s;
+/*  transition: top 0.3s; */
   /* Transition effect when sliding down (and up) */
-}
+/* } */
 
 /* The navbar */
 .topnav {
+  align: right;
+  top: 0;
+  right: 30px;
   /* float: right; */
   /*   background-color: #333; */
   overflow: hidden;
   z-index: inherit;
+
 }
 
 /* Navbar links */
@@ -252,11 +271,12 @@ STATIC LAYOUT CSS FOR BODY AREA
   float: left;
   /* order off list (top list member on left vs right)*/
   color: #f2f2f2;
+  -webkit-text-stroke: .5px black;
+
   /*   color: white; */
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 20px;
   /*   */
-  padding: 15px;
   text-decoration: none;
   font-size: 17px;
   z-index: inherit;
@@ -274,12 +294,12 @@ CSS TO Make Google Map API
 
 /* Set the size of the div element that contains the map */
 #map {
-  height: inherit;
+  /* height: inherit; */
   /* The height is 400 pixels */
-  width: inherit;
+  /* width: inherit; */
   /* The width is %  width of the web page */
-  min-width: 400px;
-  min-height: 300px
+  min-width: 350px; /* will work on laptop with 300*/
+  min-height: 400px;
 }
 
 #myImg:hover {
@@ -400,7 +420,82 @@ IMAGE GALLERY: OVERLAY TEXT ONTO IMG
   opacity: 1;
 }
 
+.hidden {
+  display: none;
+}
+/**************************
+gallery slideshow
+***************************/
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
 
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
 
 
 /**************************

@@ -1,4 +1,5 @@
-//
+/// navbar sticks to top of screen and scrolls as user scrolls down:
+
 // var coll = document.getElementsByClassName("collapsible");
 // var i;
 //
@@ -13,18 +14,18 @@
 //     }
 //   });
 // }
-
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
-/* Mountain project data API: https://www.mountainproject.com/data. Also look at google map API for route destimation overlay */
-
-/* google map api */
+//
+// /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.getElementById("navbar").style.top = "0";
+//   } else {
+//     document.getElementById("navbar").style.top = "-50px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
+// /* Mountain project data API: https://www.mountainproject.com/data. Also look at google map API for route destimation overlay */
+//
+// /* google map api */
